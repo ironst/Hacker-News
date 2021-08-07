@@ -13,6 +13,10 @@
 		3FC40D9326BA76F400B5A226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC40D9226BA76F400B5A226 /* Assets.xcassets */; };
 		3FC40D9626BA76F400B5A226 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC40D9526BA76F400B5A226 /* Preview Assets.xcassets */; };
 		3FC40D9926BA76F400B5A226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC40D9726BA76F400B5A226 /* LaunchScreen.storyboard */; };
+		3FC40DA226BA7A7D00B5A226 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC40DA126BA7A7D00B5A226 /* NetworkManager.swift */; };
+		3FC40DA426BA81CF00B5A226 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC40DA326BA81CF00B5A226 /* PostData.swift */; };
+		3FC40DA726BBA73800B5A226 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC40DA626BBA73800B5A226 /* DetailView.swift */; };
+		3FC40DA926BBABEC00B5A226 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC40DA826BBABEC00B5A226 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		3FC40D9526BA76F400B5A226 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3FC40D9826BA76F400B5A226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FC40D9A26BA76F400B5A226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC40DA126BA7A7D00B5A226 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3FC40DA326BA81CF00B5A226 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		3FC40DA626BBA73800B5A226 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3FC40DA826BBABEC00B5A226 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		3FC40DAA26BBB46300B5A226 /* Hacker News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hacker News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		3FC40D8B26BA76F200B5A226 /* Hacker News */ = {
 			isa = PBXGroup;
 			children = (
+				3FC40DAA26BBB46300B5A226 /* Hacker News.entitlements */,
+				3FC40DA026BA7A6200B5A226 /* Models */,
 				3FC40D8C26BA76F200B5A226 /* AppDelegate.swift */,
 				3FC40D8E26BA76F200B5A226 /* SceneDelegate.swift */,
-				3FC40D9026BA76F200B5A226 /* ContentView.swift */,
+				3FC40DA526BBA71E00B5A226 /* Views */,
 				3FC40D9226BA76F400B5A226 /* Assets.xcassets */,
 				3FC40D9726BA76F400B5A226 /* LaunchScreen.storyboard */,
 				3FC40D9A26BA76F400B5A226 /* Info.plist */,
@@ -73,6 +84,25 @@
 				3FC40D9526BA76F400B5A226 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3FC40DA026BA7A6200B5A226 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FC40DA126BA7A7D00B5A226 /* NetworkManager.swift */,
+				3FC40DA326BA81CF00B5A226 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FC40DA526BBA71E00B5A226 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FC40D9026BA76F200B5A226 /* ContentView.swift */,
+				3FC40DA626BBA73800B5A226 /* DetailView.swift */,
+				3FC40DA826BBABEC00B5A226 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC40DA426BA81CF00B5A226 /* PostData.swift in Sources */,
+				3FC40DA726BBA73800B5A226 /* DetailView.swift in Sources */,
+				3FC40DA226BA7A7D00B5A226 /* NetworkManager.swift in Sources */,
 				3FC40D8D26BA76F200B5A226 /* AppDelegate.swift in Sources */,
 				3FC40D8F26BA76F200B5A226 /* SceneDelegate.swift in Sources */,
 				3FC40D9126BA76F200B5A226 /* ContentView.swift in Sources */,
+				3FC40DA926BBABEC00B5A226 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hacker News/Hacker News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hacker News/Preview Content\"";
 				DEVELOPMENT_TEAM = PKGB57QLL2;
@@ -297,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jl.Hacker-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Hacker News/Hacker News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Hacker News/Preview Content\"";
 				DEVELOPMENT_TEAM = PKGB57QLL2;
@@ -318,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jl.Hacker-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
